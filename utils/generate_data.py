@@ -59,9 +59,10 @@ def expand_data(dataframe: pd.DataFrame, column: str, variable: str) -> dict:
     column -- column that will be used to expand the dataframe
     variable -- column (variable) that will be part of the grid
     """
-    result = {}
+    result = []
     for i in dataframe[variable].unique():
         coluna_resutl = dataframe.loc[dataframe[variable] == i][column].to_numpy()
-        result[int(i)] = coluna_resutl
+        result.append(coluna_resutl)
 
-    return result
+    return np.array(result)
+
