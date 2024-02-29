@@ -51,7 +51,7 @@ def generate_unique_file(filename: str, path: str) -> None:
     data = data.drop(columns=['index'])
     data.to_csv(f"{os.getcwd()}/data/{filename}", index=False)
 
-def expand_data(dataframe: pd.DataFrame, column: str, variable: str) -> dict:
+def expand_data(dataframe: pd.DataFrame, column: str, variable: str) -> np.ndarray:
     """Expandas the column shape of the data to an actual n X m grid
 
     Keywords arguments:
@@ -65,4 +65,3 @@ def expand_data(dataframe: pd.DataFrame, column: str, variable: str) -> dict:
         result.append(coluna_resutl)
 
     return np.array(result)
-
