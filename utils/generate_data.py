@@ -52,7 +52,7 @@ def generate_unique_file(filename: str, path: str) -> None:
     data.to_csv(f"{os.getcwd()}/data/{filename}", index=False)
 
 def expand_data(dataframe: pd.DataFrame, column: str, variable: str) -> np.ndarray:
-    """Expandas the column shape of the data to an actual n X m grid
+    """Expands the column shape of the data to an actual n X m grid.
 
     Keywords arguments:
     dataframe -- data to be expanded
