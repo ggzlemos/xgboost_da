@@ -7,8 +7,7 @@ from matplotlib import pyplot as plt
 
 def plot(longi: np.ndarray, lat: np.ndarray, data: np.ndarray, title: np.ndarray,
           x:tuple =None, y:tuple=None,
-         figsize:tuple=(10,8.5), save_dir:str=None) -> None:
-    
+         figsize:tuple=(10,8.5), save_dir:str=None) -> None:    
     """Generates a .png file with the variable values, adding the political division to the map
     
     Keywords arguments:
